@@ -1459,3 +1459,239 @@ h3 {
   color: #666;
   margin-top: 10px;
 }
+
+/* —— About page (/about) —— */
+.about-page {
+  background: var(--white);
+}
+
+.about-page-hero {
+  background: linear-gradient(135deg, var(--dark-navy) 0%, #132f52 100%);
+  color: var(--white);
+  padding: clamp(72px, 12vw, 110px) 0 clamp(40px, 6vw, 56px);
+}
+
+.about-page-breadcrumb {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-bottom: 16px;
+}
+
+.about-page-breadcrumb a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.about-page-breadcrumb a:hover {
+  color: var(--white);
+}
+
+.about-page-title {
+  font-size: clamp(1.85rem, 4.5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.about-page-lead {
+  font-size: 1.05rem;
+  opacity: 0.88;
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+.about-page-section {
+  border-top: 1px solid rgba(10, 29, 55, 0.06);
+}
+
+.about-page-section--doctor {
+  background: var(--white);
+}
+
+.about-page-section--light {
+  background: var(--light-bg);
+}
+
+.about-page-section--certs {
+  background: var(--white);
+}
+
+.about-page-kicker {
+  display: block;
+  color: var(--primary-blue);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.about-page-doctor-card {
+  display: grid;
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 56px);
+  align-items: start;
+}
+
+.about-page-doctor-media {
+  display: flex;
+  justify-content: center;
+}
+
+.about-page-doctor-ring {
+  border: 12px solid rgba(30, 95, 216, 0.1);
+  border-radius: 50%;
+  padding: 20px;
+  display: inline-block;
+}
+
+.about-page-doctor-img {
+  width: min(100%, 280px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-page-doctor-name {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--dark-navy);
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+.about-page-doctor-degrees {
+  color: var(--primary-blue);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.about-page-doctor-role {
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.about-page-narrow {
+  max-width: 800px;
+}
+
+.about-page-h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+  color: var(--dark-navy);
+  margin-bottom: 24px;
+  line-height: 1.25;
+}
+
+.about-page-h2--center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 640px;
+}
+
+.about-page-h3 {
+  font-size: 1.25rem;
+  color: var(--dark-navy);
+  margin: 32px 0 14px;
+  line-height: 1.35;
+}
+
+.about-page-prose p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.about-page-list {
+  margin: 12px 0 20px;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.about-page-list li {
+  margin-bottom: 8px;
+}
+
+.cert-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.cert-card {
+  background: var(--white);
+  border: 1px solid rgba(10, 29, 55, 0.08);
+  border-radius: 16px;
+  padding: 24px 24px 26px;
+  box-shadow: 0 8px 28px rgba(10, 29, 55, 0.06);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.cert-card:hover {
+  box-shadow: 0 14px 36px rgba(10, 29, 55, 0.1);
+  transform: translateY(-3px);
+}
+
+.cert-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-blue), #4d8ef0);
+}
+
+.cert-card-title {
+  font-size: 1.1rem;
+  color: var(--dark-navy);
+  margin-bottom: 12px;
+  line-height: 1.35;
+  padding-top: 4px;
+}
+
+.cert-card-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.about-page-cta {
+  background: rgba(30, 95, 216, 0.06);
+  border-top: 1px solid rgba(10, 29, 55, 0.08);
+  padding: 48px 0;
+}
+
+.about-page-cta-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.about-page-cta-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark-navy);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .about-page-doctor-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-page-doctor-body .about-page-prose {
+    text-align: left;
+  }
+}

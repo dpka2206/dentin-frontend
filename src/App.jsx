@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import AboutPage from './pages/AboutPage.jsx';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -268,7 +269,7 @@ const Navbar = () => {
           <ul className="nav-links">
             <li><Link to="/#home" onClick={closeMenu}>Home</Link></li>
             <li><Link to="/services" onClick={closeMenu}>Services</Link></li>
-            <li><Link to="/#about" onClick={closeMenu}>About Us</Link></li>
+            <li><Link to="/about" onClick={closeMenu}>About Us</Link></li>
             <li><Link to="/#doctors" onClick={closeMenu}>Doctors</Link></li>
             <li><Link to="/#testimonials" onClick={closeMenu}>Testimonials</Link></li>
             <li><Link to="/#contact" onClick={closeMenu}>Contact</Link></li>
@@ -348,12 +349,12 @@ const Hero = () => {
 
 const AboutUs = () => {
   return (
-    <section id="about" className="section-padding about-us-section">
+    <section className="section-padding about-us-section">
       <div className="container">
         <div className="about-layout">
           <div className="about-media">
             <div className="about-photo-ring">
-              <img src="/images/doctor.png" alt="Doctor" className="about-photo" />
+              <img src="/images/doctor.png" alt="Dr. Suryanarayana Sarma" className="about-photo" />
             </div>
             <div className="about-badge" aria-hidden="true">
               <i className="fas fa-award"></i>
@@ -361,25 +362,25 @@ const AboutUs = () => {
           </div>
           <div className="about-text">
             <span className="about-kicker">ABOUT US</span>
-            <h2 className="about-heading">15 Years of Expertise in Dental Care</h2>
+            <h2 className="about-heading">Meet Dr. Suryanarayana Sarma &amp; Our Clinic</h2>
             <p className="about-lead">
-              Dentino Oral Experts is a trusted dental clinic known for pain-free, advanced treatments. Our team of experienced doctors uses the latest technology to give you the best dental care — all in a calm and comfortable setting.
+              Chief Dental Surgeon (BDS, MDS). Calm, patient-focused care with modern technology — from consultation to treatment, explained clearly so you feel confident.
             </p>
             <ul className="about-check-list">
               <li>
                 <i className="fas fa-check-circle about-check-icon"></i>
-                Advanced Dental Services You Can Trust
+                Root canal, restorative &amp; advanced procedures
               </li>
               <li>
                 <i className="fas fa-check-circle about-check-icon"></i>
-                Experienced Doctors Dedicated to You
+                Simple, comfortable care at Dentino Oral Experts
               </li>
               <li>
                 <i className="fas fa-check-circle about-check-icon"></i>
-                Modern Equipment, Gentle Treatment
+                Long-term oral health, not just quick fixes
               </li>
             </ul>
-            <button type="button" className="btn btn-primary about-cta">Learn More</button>
+            <Link to="/about" className="btn btn-primary about-cta">Read full about us</Link>
           </div>
         </div>
       </div>
@@ -797,11 +798,11 @@ const Footer = () => {
               <span style={{ display: 'block', width: '40px', height: '2px', background: 'var(--primary-blue)', marginTop: '8px' }}></span>
             </h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '15px', opacity: 0.8 }}>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Testimonials</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/#doctors">Our Team</Link></li>
+              <li><Link to="/#contact">Contact Us</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/#testimonials">Testimonials</Link></li>
             </ul>
           </div>
 
@@ -904,6 +905,15 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route
+            path="/about"
+            element={
+              <>
+                <AboutPage />
+                <Footer />
+              </>
+            }
+          />
           <Route path="/services" element={<AllServicesPage />} />
         </Routes>
       </div>
